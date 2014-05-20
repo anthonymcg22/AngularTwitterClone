@@ -1,0 +1,36 @@
+﻿<div class="col-md-3">
+    <a href="#/profile"><img ng-src="{{profile.pictureUrl}}"></a>
+    <div id="myBio" class="well">
+        <h3 ng-show="!editing">{{profile.userName}}</h3>
+        <p ng-show="editing">Username: &nbsp <input type="text" ng-model="profile.userName" /></p><br />
+        <p ng-show="!editing">{{profile.personalUrl}}</p>
+        <p ng-show ="editing">Database URL: &nbsp <input type="text" ng-model="profile.personalUrl" /></p><br/>
+        <p ng-show="editing">Image URL: &nbsp <input type="text" ng-model="profile.pictureUrl" /></p>
+        <p ng-show="!editing">{{profile.biography}}</p>
+        <div ng-show ="editing"><p>Bio: </p><textarea ng-model="profile.biography"></textarea></div>
+        <div><div ng-show="!editing" ng-click="editing = true" class="btn btn-danger">EDIT</div></div>
+        <div><div ng-show="editing" ng-click="editing = false" class="btn btn-success">SAVE</div></div>
+    </div>
+</div>
+<div class="col-md-6">
+    <div>
+        <div class="btn btn-warning" ng-click="addFriendTweets()">Add Friend</div>
+        <input ng-model="user" id="friendInput" type="text" class="form-control" placeholder="Add a friend">
+    </div>
+    <div class="well" ng-repeat="tweet in tweets | orderBy: 'time'"><img ng-src="{{tweet.pictureUrl}}" class="tweetPic" />&nbsp; &nbsp; <strong>{{tweet.userName}}</strong>&nbsp; &nbsp; --- &nbsp; &nbsp; {{tweet.message}}  ....  
+        <span id="date"><em>{{tweet.time | date : format}}</em></span>
+    </div>
+    <textarea placeholder="Write your tweet here" ng-model="myTweet"></textarea>
+    <div class="btn btn-success" ng-click="addMyTweet()">Tweet</div>
+</div>
+<div id="rightSide" class="col-md-3">
+    <div id="homeBtn" class="btn btn-danger btn-lg">HOME</div><br/><br/>
+    <h2>Friends</h2>
+
+    <div class="friends" ng-repeat="friend in friends | orderBy: 'userName'">
+        <div><h3>{{friend.userName}}</h3></div>
+        <img ng-src="{{friend.pictureUrl}}" />
+        <p><strong>Bio:</strong></p>
+        <span>{{friend.biography}}</span>
+    </div>
+</div>

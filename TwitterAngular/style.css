@@ -1,0 +1,74 @@
+﻿body {
+    background: #90EE90;
+}
+#myBio {
+    width: 80%;
+    height: auto;
+    text-align: center;
+    background-color: #95b8c6;
+}
+#myBio div div.btn {
+    margin: 8px auto;
+}
+#myProfile {
+        width: 80%;
+    height: auto;
+    text-align: center;
+    background-color: #95b8c6;
+    height: 100%;
+}
+#friendInput {
+    float: right;
+    width: 64%;
+    margin: 15px 0px;
+}
+#profilePic {
+    width: 80%;
+    height: 35%;
+}
+.btn {
+    margin: 15px 40px 15px 0px;
+    color: black;
+}
+textarea {
+    width: 100%;
+    height: 70px;
+}
+img {
+    width: 80%;
+    height: 180px;
+    border-radius: 10px;
+    margin: 20px auto;
+}
+.tweetPic {
+    width: 60px;
+    height: 60px;
+}
+.friends {
+height: 230px;
+width: 75%;
+margin: 15px auto;
+border: 2px solid black;
+border-radius: 12px;
+text-align: center;
+}
+.friends img {
+text-align: center;
+margin: 0 15px;
+width: 80px;
+height: 80px;
+border-radius: 3px;
+}
+#rightSide {
+    text-align: center;
+}
+#homeBtn {
+    margin: 15px auto;
+}
+#rightSide h2 {
+    text-align: center;
+    margin: 20px 0px 20px;
+}
+#date {
+    float: right;
+}
